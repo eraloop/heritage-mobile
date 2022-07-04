@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './utilities/colors.dart';
-import './screens/splash_screen.dart';
+import './onboarding/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,10 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.blue,
         // accentColor: Colors(382839),
         textTheme: const TextTheme(
-          headline1: TextStyle(fontSize: 40.0, fontWeight: FontWeight.w600),
+          headline1: TextStyle(
+            fontSize: 40.0,
+            fontWeight: FontWeight.w600,
+          ),
           headline6: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w200),
           bodyText2: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w200),
         ),

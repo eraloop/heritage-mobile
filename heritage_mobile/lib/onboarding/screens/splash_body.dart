@@ -16,7 +16,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        color: Colors.white,
+        padding: const EdgeInsets.only(left: 40, right: 40),
         width: double.infinity,
         child: Column(
           children: <Widget>[
@@ -33,24 +33,25 @@ class _BodyState extends State<Body> {
                 },
                 itemCount: splashData.length,
                 itemBuilder: (context, index) => SplashContent(
-                  head: splashData[index]["head"],
-                  image: splashData[index]["image"],
-                  text: splashData[index]['text'],
+                  caption: splashData[index]["caption"],
+                  heading: splashData[index]["heading"],
+                  // text: splashData[index]['text'],
+                  // alignment: splashData[index]['alignment'],
                 ),
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(20)),
+                    horizontal: getProportionateScreenWidth(10)),
                 child: Column(
                   children: <Widget>[
                     const SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +71,7 @@ class _BodyState extends State<Body> {
                           style: TextStyle(color: bodyColor, fontSize: 16),
                         ),
                         Container(
-                          height: 40,
+                          height: 30,
                           width: 50,
                           decoration: BoxDecoration(
                             color: rightButton,
