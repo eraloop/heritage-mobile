@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './utilities/colors.dart';
+import './screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,18 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
             title: Text(widget.title), backgroundColor: AppColors.primaryColor),
-        body: Center(
-            child: Column(
-          children: <Widget>[
-            Text(
-              "this is supposed tobe a semi bold heading",
-              style: Theme.of(context).textTheme.headline1,
-            ),
-            Text("this text is supposed tobe regular text",
-                style: Theme.of(context).textTheme.headline6),
-            Text("this is supposed tobe a body text and its light",
-                style: Theme.of(context).textTheme.bodyText2)
-          ],
-        )));
+        body: SplashScreen());
   }
 }
